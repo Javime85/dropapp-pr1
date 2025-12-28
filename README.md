@@ -53,7 +53,12 @@ L’avaluació es fa només sobre Android: el projecte s’ha provat en un dispo
 - Afegir més opcions de configuració de recordatoris (sèries de gotes, nombre de dies de tractament).
 - Permetre registrar l’hora real en què s’ha aplicat cada gota i mostrar un historial.
 - Millorar l’estètica general i afegir més estats visuals al canvas (per exemple, diferents gotes segons el progrés).
-- Preparar la continuació per a PR2 amb consulta a una API externa relacionada amb salut o recordatoris. [file:1]
+- Preparar la continuació per a PR2 amb consulta a una API externa relacionada amb salut o recordatoris.
+
+## Llicència
+
+Aquest projecte està publicat sota la llicència MIT.
+Vegeu el fitxer `LICENSE` per a més detalls.
 
 ## Autor
 
