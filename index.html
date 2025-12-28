@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DropApp</title>
+
+    <!-- Enllaç al CSS global (carregat directament des de l'HTML) -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Pantalla inicial (splash) amb el logo de DropApp -->
+    <div id="splash-screen">
+      <img src="/dropapp_logo.png" alt="Logo DropApp" id="splash-logo" />
+    </div>
+
+    <!-- Contenidor principal de l’aplicació -->
+    <div id="app-container" style="display: none">
+      <!-- Canvas de p5 -->
+      <div id="p5-container"></div>
+
+      <!-- Fons enfosquit quan s’obre el panell de configuració -->
+      <div id="config-backdrop" class="hidden"></div>
+
+      <!-- Panell de configuració de l’app -->
+      <div id="config-panel" class="hidden">
+        <h2>Configuració DropApp</h2>
+
+        <label for="config-interval-hours">
+          Hores entre dosis de gotes
+        </label>
+        <input
+          type="number"
+          id="config-interval-hours"
+          min="1"
+          max="24"
+          step="1"
+          value="3"
+        />
+
+        <label for="config-dark-mode">
+          Mode fosc
+        </label>
+        <select id="config-dark-mode">
+          <option value="on" selected>Activat</option>
+          <option value="off">Desactivat</option>
+        </select>
+
+        <!-- NOVES OPCIONS NATIVES -->
+
+        <label>
+          <input type="checkbox" id="chk-notificacio" />
+          Enviar notificació quan s’acabi el temps
+        </label>
+
+        <!-- Ús de la llanterna per al recordatori visual -->
+        <label>
+          <input type="checkbox" id="chk-flash" />
+          Fer servir la llanterna en els últims segons
+        </label>
+
+        <div class="config-actions">
+          <button id="config-save">Desar canvis</button>
+          <button id="config-cancel">Cancel·lar</button>
+        </div>
+      </div>
+
+      <!-- Botó flotant per obrir/tancar la configuració -->
+      <button id="config-toggle" aria-label="Obrir configuració">
+        ⚙️
+      </button>
+    </div>
+
+    <!-- p5 carregat en global perquè sketch.js pugui fer new p5(...) -->
+    <script src="/p5.js"></script>
+
+    <!-- Punt d’entrada de Vite en mode mòdul -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
