@@ -63,16 +63,11 @@ Aquest projecte està publicat sota la llicència **MIT**. Vegeu el fitxer `LICE
 
 ## Descàrrega directa
 
-```
 [Descarregar ZIP](https://github.com/Javime85/dropapp-pr1/archive/refs/heads/main.zip)
-```
 
 O clona el repositori:
 
-```
 git clone https://github.com/Javime85/dropapp-pr1.git
-```
-```
 
 ## Autor
 
