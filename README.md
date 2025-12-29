@@ -61,6 +61,20 @@ L'avaluació es fa només sobre Android: el projecte s'ha provat en un dispositi
 
 Aquest projecte està publicat sota la llicència **MIT**. Vegeu el fitxer `LICENSE` per a més detalls.
 
+## Descàrrega directa
+
+```
+[Descarregar ZIP](https://github.com/Javime85/dropapp-pr1/archive/refs/heads/main.zip)
+```
+```
+
+O clona el repositori:
+
+```
+git clone https://github.com/Javime85/dropapp-pr1.git
+```
+```
+
 ## Autor
 
 **Javier Villalón Mena** – UOC, assignatura *Desenvolupament d'aplicacions interactives* (PR1).
