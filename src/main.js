@@ -1,16 +1,13 @@
-// src/main.js - Control general de DropApp (UI, configuració, notificacions, llanterna, vibració i so d'alarma)
+// src/main.js - Control general de DropApp (UI, configuració, notificacions, llanterna i vibració)
 // --------------------------------------------------------------------------------------
 // - Gestiona la UI HTML (targeta, modal de configuració, etc.).
 // - Exposa funcions globals a window perquè el sketch p5.js pugui cridar funcionalitat nativa:
 //   notificacions, llanterna i vibració.
-// - Afegeix inicialització de l'àudio nadiu per a l'alarma (NativeAudio).
 
 import './sketch.js';
 
 import { LocalNotifications } from '@capacitor/local-notifications';
 import { Torch } from '@capawesome/capacitor-torch';
-// NOVETAT: import d'àudio natiu
-import { NativeAudio } from '@capacitor-community/native-audio';
 
 // Claus per localStorage
 const KEY_INTERVAL_HOURS = 'dropapp_interval_hours';
@@ -98,9 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inicialitzar permissos de notificacions (opcional)
   LocalNotifications.requestPermissions().catch(() => {});
-
-  // NOVETAT: inicialitzar àudio d'alarma
-  inicialitzarAudioAlarm();
 });
 
 // ---------- FUNCIONS NATIVES GLOBALS PER AL SKETCH ----------
@@ -165,32 +159,5 @@ window.dropappVibrateShort = () => {
     if (navigator.vibrate) navigator.vibrate(120);
   } catch (e) {
     console.log('Error vibració curta:', e);
-  }
-};
-
-// ---------- ÀUDIO NATIU D'ALARMA ----------
-async function inicialitzarAudioAlarm() {
-  try {
-    await NativeAudio.preload({
-      assetId: 'dropapp_alarm',
-      assetPath: 'soft_wake_up.mp3', // fitxer ubicat a public/soft_wake_up.mp3
-    });
-    console.log("Àudio d'alarma pre-carregat");
-  } catch (e) {
-    console.log('Error pre-carregant àudio:', e);
-  }
-}
-
-// Funció global perquè el sketch pugui reproduir el so
-window.dropappPlayAlarmSound = async () => {
-  try {
-    await NativeAudio.play({
-      assetId: 'dropapp_alarm',
-      time: 0,
-      volume: 1.0,
-      loop: false,
-    });
-  } catch (e) {
-    console.log('Error reproduint àudio:', e);
   }
 };
