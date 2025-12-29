@@ -7,6 +7,7 @@
 import './sketch.js';
 
 import { LocalNotifications } from '@capacitor/local-notifications';
+import { Haptics } from '@capacitor/haptics';
 import { Torch } from '@capawesome/capacitor-torch';
 
 // Claus per localStorage
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Obrir/tancar panell de configuració
   const openConfig = () => {
     configPanel?.classList.remove('hidden');
-    configBackdrop?.classList.remove('hidden');
+    configBackdrop?.classList.add('hidden');
   };
   const closeConfig = () => {
     configPanel?.classList.add('hidden');
@@ -144,19 +145,19 @@ window.dropappTorchOff = async () => {
   }
 };
 
-// Vibració (impacte inicial)
-window.dropappVibrateImpact = () => {
+// Vibració (impacte inicial) - Ara usa Haptics en lloc de navigator.vibrate
+window.dropappVibrateImpact = async () => {
   try {
-    if (navigator.vibrate) navigator.vibrate(300);
+    await Haptics.vibrate({ duration: 300 });
   } catch (e) {
     console.log('Error vibració impacte:', e);
   }
 };
 
-// Vibració curta repetida
-window.dropappVibrateShort = () => {
+// Vibració curta repetida - Ara usa Haptics
+window.dropappVibrateShort = async () => {
   try {
-    if (navigator.vibrate) navigator.vibrate(120);
+    await Haptics.vibrate({ duration: 120 });
   } catch (e) {
     console.log('Error vibració curta:', e);
   }
