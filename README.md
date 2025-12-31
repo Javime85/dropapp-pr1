@@ -23,17 +23,26 @@ DropApp permet configurar intervals de temps perquè el dispositiu avisi quan to
 
 ```
 dropapp-pr1/
+├─ css/
+│  └─ style.css
 ├─ public/
-│  ├─ index.html          # Carrega p5.js i inicialitza l'app
+│  ├─ dropapp_logo.png
+│  ├─ gota.png
+│  ├─ p5.js
+│  ├─ p5.sound.min.js
+│  └─ vite.svg
 ├─ src/
-│  ├─ sketch.js           # Lògica del temporitzador i animació p5.js
-│  ├─ main.js             # Capacitor plugins + config localStorage
-│  └─ style.css           # Mode fosc/clar + responsive
-├─ android/               # Projecte Android generat per Capacitor
-├─ capacitor.config.ts    # Configuració Capacitor
-├─ package.json           # Scripts npm i dependències
-├─ vite.config.js         # Config Vite + p5.js
-└─ README.md              # Documentació del projecte
+│  ├─ main.js
+│  └─ sketch.js
+├─ index.html              
+├─ android/
+├─ capacitor.config.ts
+├─ package.json
+├─ tsconfig.json
+├─ tsconfig.node.json
+├─ vite.config.ts
+├─ LICENSE
+└─ README.md
 ```
 
 ## Tecnologies utilitzades
