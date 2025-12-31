@@ -18,6 +18,22 @@ DropApp permet configurar intervals de temps perquè el dispositiu avisi quan to
   * Interval entre dosis
   * Mode fosc/clar
   * Activació de llanterna i notificacions
+ 
+ ## Estructura del projecte
+
+```text
+dropapp-pr1/
+├─ public/
+│  ├─ index.html          # Carrega p5.js i inicialitza l'app
+├─ src/
+│  ├─ sketch.js           # Lògica del temporitzador i animació p5.js
+│  ├─ main.js             # Capacitor plugins + config localStorage
+│  └─ style.css           # Mode fosc/clar + responsive
+├─ android/               # Projecte Android generat per Capacitor
+├─ capacitor.config.ts    # Configuració Capacitor
+├─ package.json           # Scripts npm i dependències
+├─ vite.config.js         # Config Vite + p5.js
+└─ README.md              # Documentació del projecte
 
 ## Tecnologies utilitzades
 
