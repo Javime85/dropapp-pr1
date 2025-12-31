@@ -21,7 +21,7 @@ DropApp permet configurar intervals de temps perquè el dispositiu avisi quan to
  
  ## Estructura del projecte
 
-```text
+```
 dropapp-pr1/
 ├─ public/
 │  ├─ index.html          # Carrega p5.js i inicialitza l'app
@@ -34,6 +34,7 @@ dropapp-pr1/
 ├─ package.json           # Scripts npm i dependències
 ├─ vite.config.js         # Config Vite + p5.js
 └─ README.md              # Documentació del projecte
+```
 
 ## Tecnologies utilitzades
 
