@@ -23,6 +23,7 @@ DropApp permet configurar intervals de temps perquè el dispositiu avisi quan to
 
 ```
 dropapp-pr1/
+├─ android/
 ├─ css/
 │  └─ style.css
 ├─ public/
@@ -31,11 +32,11 @@ dropapp-pr1/
 │  ├─ p5.js
 │  ├─ p5.sound.min.js
 │  └─ vite.svg
+├─ resources/            
 ├─ src/
 │  ├─ main.js
 │  └─ sketch.js
-├─ index.html              
-├─ android/
+├─ index.html
 ├─ capacitor.config.ts
 ├─ package.json
 ├─ tsconfig.json
