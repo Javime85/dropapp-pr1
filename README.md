@@ -37,7 +37,6 @@ npm run build
 npx cap sync android
 npx cap open android
 ```
-```
 
 L'avaluació es fa només sobre Android: el projecte s'ha provat en un dispositiu **Xiaomi Redmi Note 14 Pro** amb **Android 15**.
 
